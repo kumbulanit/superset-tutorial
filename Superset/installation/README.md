@@ -178,3 +178,30 @@ sudo systemctl start superset.service
 ```
 
 ### YEY! Your production Server is Up and running you can test it by restarting the server...
+
+Clone the Superset Helm Chart Repository:
+
+```
+git clone https://github.com/apache/superset-helm.git
+cd superset-helm
+```
+Deploy Superset Using Helm:
+
+```
+helm install superset . -f values.yaml
+```
+Initialize the Database:
+
+```
+kubectl exec -it <superset-pod> -- superset db upgrade
+kubectl exec -it <superset-pod> -- superset init
+```
+Access Superset:
+Get the service URL using:
+
+```
+kubectl get svc
+
+or go to following
+
+https://superset.apache.org/docs/installation/kubernetes
