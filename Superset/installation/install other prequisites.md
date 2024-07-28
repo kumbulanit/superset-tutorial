@@ -1,5 +1,5 @@
 install docker on ubuntu 24 
-ChatGPT
+
 To install Docker on Ubuntu 24.04, follow these steps:
 
 Update the Package Index:
