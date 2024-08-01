@@ -48,6 +48,11 @@ export SUPERSET_CONFIG_PATH=/app/superset/superset_config.py
 
 ```
 
+Please replace YOUR_OWN_RANDOM_GENERATED_SECRET_KEY in below file with the code returned by following command
+
+```
+openssl rand -base64 42
+
 * Edit and paste following code in it
 
 ```
@@ -104,8 +109,12 @@ superset init
 ```
 
 * Now Our environment is ready lets try running it..
-To run superset I have created a sh script that you can run in order to run the server. To create create script using following command.
 
+```
+nohup superset  run -p 8088 --with-threads --reload --debug &> superset.log &
+```
+### FOR MORE ADVANCED USERS 
+To run superset I have created a sh script that you can run in order to run the server. To create create script using following command.
 ```
 nano run_superset.sh
 ```
