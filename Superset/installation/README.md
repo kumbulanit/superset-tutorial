@@ -52,7 +52,7 @@ Please replace YOUR_OWN_RANDOM_GENERATED_SECRET_KEY in below file with the code 
 
 ```
 openssl rand -base64 42
-
+```
 * Edit and paste following code in it
 for reference to more apache superset configs have a look at this link
 https://github.com/apache/superset/blob/master/superset/config.py
